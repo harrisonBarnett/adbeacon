@@ -1,0 +1,79 @@
+﻿<Window x:Class="ADBeacon.Views.EditBroadcastItem"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ADBeacon.Views"
+        mc:Ignorable="d"
+        Title="Edit" Height="560" Width="420">
+    <Grid
+    Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+
+        <Label
+            Grid.Row="0"
+            Grid.Column="0">
+            Edit your broadcast
+        </Label>
+
+        <Button 
+            x:Name="confirmEditBtn"
+            Grid.Row="0" 
+            Grid.Column="1"
+            Margin="10,0,0,0"
+            Click="confirmEditBtn_Click">
+            Update
+        </Button>
+
+        <StackPanel
+            x:Name="formArea"
+            Grid.Row="1"
+            Grid.Column="0">
+            <StackPanel>
+                <Label Content="Label"/>
+                <TextBox x:Name="editBroadcastLabel" 
+                Background="WhiteSmoke" />
+            </StackPanel>
+            <StackPanel>
+                <Label Content="Description"/>
+                <TextBox 
+                    x:Name="editBroadcastDescription" 
+                    Height="60"
+                    TextWrapping="Wrap"
+                    AcceptsReturn="True"
+                    VerticalScrollBarVisibility="Visible"
+                    Background="WhiteSmoke"/>
+            </StackPanel>
+            <StackPanel>
+                <Label Content="Intent"/>
+                <TextBox x:Name="editBroadcastIntent" 
+                Background="WhiteSmoke"/>
+            </StackPanel>
+            <StackPanel>
+                <Label Content="Category"/>
+                <TextBox x:Name="editBroadcastCategory"
+                Background="WhiteSmoke" />
+            </StackPanel>
+            <StackPanel>
+                <Label Content="Extra Strings"/>
+                <Label                 
+                    Content="One pair per line; comma-separated (e.g. com.company.foo, bazbarfoo)"
+                    FontSize="9"/>
+                <TextBox
+                    x:Name="editBroadcastExtras"
+                    Height="180"
+                    TextWrapping="Wrap"
+                    AcceptsReturn="True"
+                    VerticalScrollBarVisibility="Visible"
+                    Background="WhiteSmoke"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

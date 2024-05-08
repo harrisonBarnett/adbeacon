@@ -1,0 +1,78 @@
+﻿<Window x:Class="ADBeacon.Views.AddBroadcastItem"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ADBeacon.Views"
+        mc:Ignorable="d"
+        Title="Add" Height="560" Width="420">
+    <Grid
+    Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+
+        <Label
+            Grid.Row="0"
+            Grid.Column="0">
+            Create a broadcast
+        </Label>
+
+        <Button 
+            x:Name="confirmAddBtn"
+            Grid.Row="0" 
+            Grid.Column="1"
+            Margin="10,0,0,0"
+            Click="confirmAddBtn_Click">
+            Add
+        </Button>
+
+        <StackPanel
+            x:Name="formArea"
+            Grid.Row="1"
+            Grid.Column="0">
+            <StackPanel>
+                <Label Content="Label"/>
+                <TextBox x:Name="addBroadcastLabel" Background="WhiteSmoke"/>
+            </StackPanel>
+            <StackPanel>
+                <Label Content="Description"/>
+                <TextBox 
+                    x:Name="addBroadcastDescription"
+                    Height="60"
+                    TextWrapping="Wrap"
+                    AcceptsReturn="True"
+                    VerticalScrollBarVisibility="Visible"
+                    Background="WhiteSmoke"/>
+            </StackPanel>
+            <StackPanel>
+                <Label Content="Intent"/>
+                <TextBox x:Name="addBroadcastIntent"
+                Background="WhiteSmoke"/>
+            </StackPanel>
+            <StackPanel>
+                <Label Content="Category"/>
+                <TextBox x:Name="addBroadcastCategory" 
+                Background="WhiteSmoke"/>
+            </StackPanel>
+            <StackPanel>
+                <Label Content="Extra Strings"/>
+                <Label                 
+                    Content="One pair per line; comma-separated (e.g. com.company.foo, bazbarfoo)"
+                    FontSize="8"/>
+                <TextBox
+                    x:Name="addBroadcastExtras"
+                    Height="180"
+                    TextWrapping="Wrap"
+                    AcceptsReturn="True"
+                    VerticalScrollBarVisibility="Visible"
+                    Background="WhiteSmoke"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

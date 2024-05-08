@@ -1,0 +1,7 @@
+ADBeacon: An Android Broadcast Simulator
+
+Android development unfortunately often provides unique opportunities for friction. When working with emulated devices or devices physically coupled to your development environment, it can be difficult to test the full functionality of a physical device as it should work in your hands. This has been the case while developing barcode scanning applications -- you cannot know the full functionality of your application with regard to the scanning device's broadcasts until it is published to a physical device.
+
+To mitigate some of this friction, the Android SDK comes packaged with a command line tool called the Android Debug Bridge, or ADB for short. This tool can be used to simulate broadcasts to any device (emulated or physical) running on the host machine. While ADB is quite useful, it is also quite unweildy. Instead of manually typing in commands or maintaining a text file of scripts to run in a terminal adjacent to your Android development, ADBeacon allows you to simply configure a broadcast, save it to your machine and simulate any broadcast at the click of a button in a tidy graphical user interface.
+
+This application has been invaluable during the development of Android barcode scanner applications. By simply simulating the broadcasts that one can expect to receive from the barcode scanner's API, one can easily test the functionality of the application on emulated or physically tethered devices while maintaining precise control of networking and hot reloading for quick iteration. 
